@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "콘도르 한글 자막",
+  "version": "0.1.0",
+  "description": "Prime Video 재생 화면에 드라마 Condor 한국어 자막을 띄웁니다. 아이콘을 누르면 켜집니다.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.primevideo.com/*",
+    "https://*.amazon.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "한글 자막 켜기"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+S",
+        "mac": "Alt+Shift+S"
+      },
+      "description": "한글 자막 켜기"
+    }
+  }
+}
